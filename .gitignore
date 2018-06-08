@@ -103,6 +103,10 @@ ENV/
 # kops
 out/
 
+# helm
+.lock
+.tgz
+
 # secret configs
 config.yaml
 /keys

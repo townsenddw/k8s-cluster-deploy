@@ -18,6 +18,4 @@ spec:
       - name: reserve-resources
         image: k8s.gcr.io/pause
         resources:
-          requests:
-            memory: "20G"
-            cpu: "2"
+{{ toYaml .Values.overprovisioning.resources | indent 12}}
