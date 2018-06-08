@@ -104,8 +104,8 @@ ENV/
 out/
 
 # helm
-.lock
-.tgz
+*.lock
+*.tgz
 
 # secret configs
 config.yaml
