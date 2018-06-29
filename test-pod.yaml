@@ -12,11 +12,4 @@ spec:
     # args:
     #   - "-c"
     #   - "touch /mnt/SUCCESS && exit 0 || exit 1"
-    volumeMounts:
-      - name: efs-pvc
-        mountPath: "/mnt"
   restartPolicy: "Never"
-  volumes:
-    - name: efs-pvc
-      persistentVolumeClaim:
-        claimName: efs
