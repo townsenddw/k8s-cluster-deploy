@@ -12,4 +12,12 @@ spec:
     # args:
     #   - "-c"
     #   - "touch /mnt/SUCCESS && exit 0 || exit 1"
+    volumeMounts:
+      - name: pv-volume
+        mountPath: /persistentvolumes
+  volumes:
+    - name: pv-volume
+      nfs:
+        server: fs-35e87e9c.efs.us-west-2.amazonaws.com 
+        path: /
   restartPolicy: "Never"

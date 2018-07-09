@@ -10,3 +10,28 @@ def add_resources(spawner, pod):
     return pod
 c.KubeSpawner.modify_pod_hook = add_resources
 ```
+
+## Node Affinity (leaning towards computional optimized instances)
+```python
+c.KubeSpawner.extra_pod_config = {
+    "affinity": {
+        "nodeAffinity": {
+            "requiredDuringSchedulingIgnoredDuringExecution": {
+                "nodeSelectorTerms": [
+                {
+                    "matchExpressions": [
+                    {
+                        "key": "beta.kubernetes.io/instance-type",
+                        "operator": "In",
+                        "values": [
+                        "c4.2xlarge"
+                        ]
+                    }
+                    ]
+                }
+                ]
+            }
+        }
+    }
+}
+```
