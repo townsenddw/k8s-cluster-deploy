@@ -14,7 +14,7 @@ r = requests.get(url)
 
 # Extract Capacity, StartTime, EndTime
 
-# Generate Estimated need curve hourly (ie sum up enrolled per hour)
+# Generate Estimated need curve hourly (ie sum up enrolled per hour x gb-rm/user)
 
 # Create scheduled scaling operations to match need curve
 asc = boto3.client('autoscaling')
