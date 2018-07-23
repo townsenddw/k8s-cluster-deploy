@@ -11,5 +11,5 @@ cluster-autoscaler:
 overprovisioning:
   resources:
     requests:
-      memory: 20G
+      memory: 10G
       cpu: 2
