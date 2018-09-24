@@ -4,9 +4,9 @@
 helm repo add jupyterhub https://jupyterhub.github.io/helm-chart/
 helm repo update
 helm install jupyterhub/jupyterhub \
-  --version=v0.6 \
-  --name=$1 \
-  --namespace=$1 \
+  --version 0.7.0 \
+  --name $1 \
+  --namespace $1 \
   -f deployments/config-$1.yaml
 
 # TODO: Set Up Automatic DNS provisioning to loadbalancer
