@@ -1,21 +1,21 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: nfs-dev
+  name: nfs-stat218
 spec:
   capacity:
     storage: 1Gi
   accessModes:
     - ReadWriteMany
   nfs:
-    server: fs-dd8d8074.efs.us-west-2.amazonaws.com
-    path: "/"
+    server: fs-9678773f.efs.us-west-2.amazonaws.com
+    path: "/home"
 
 ---
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
-  name: nfs-dev
+  name: nfs-stat218
 spec:
   accessModes:
     - ReadWriteMany
