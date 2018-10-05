@@ -9,7 +9,7 @@ spec:
     - ReadWriteMany
   nfs:
     server: fs-9678773f.efs.us-west-2.amazonaws.com
-    path: "/home"
+    path: "/"
 
 ---
 kind: PersistentVolumeClaim
